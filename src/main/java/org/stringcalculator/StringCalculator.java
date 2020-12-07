@@ -29,9 +29,25 @@ public class StringCalculator {
 	private static int sum(String[] numbers)
 	{
  	    int total = 0;
+ 	    String ngNumbers = "";
         for(String number : numbers){
+        	if(toInt(number) < 0)
+        	{
+        		if(ngNumbers.equals(""))
+        		{
+        			ngNumbers = number;
+        		}
+        		else
+        		{
+        			ngNumbers += "," + number;
+        		}
+        	}
+        	
 		    total += toInt(number);
 		}
+        
+        if(ngNumbers.length()>0)
+        	throw new IllegalArgumentException("Negatives not allowed: "+ ngNumbers);
 		return total;
     }
 	
