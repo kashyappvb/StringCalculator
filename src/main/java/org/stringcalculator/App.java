@@ -1,4 +1,4 @@
-package org.stringcalculator.stringcalculator;
+package org.stringcalculator;
 
 /**
  * Hello world!

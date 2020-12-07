@@ -1,8 +1,9 @@
-package org.stringcalculator.stringcalculator;
+package org.stringcalculator;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+import org.stringcalculator.StringCalculator;
 
 public class StringCalculatorTest {
 
