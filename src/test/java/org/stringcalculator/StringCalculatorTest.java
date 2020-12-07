@@ -47,5 +47,7 @@ public class StringCalculatorTest {
 	public void testNumberOverThousand()
 	{
 		assertEquals(5,StringCalculator.add("5,1006"));
+		
+		assertEquals(1005,StringCalculator.add("5,1000"));
 	}
 }

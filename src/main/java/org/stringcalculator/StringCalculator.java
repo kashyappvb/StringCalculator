@@ -1,7 +1,7 @@
 package org.stringcalculator;
 
 public class StringCalculator {
-		
+	
 	public static int add(String text){
 		if(text.length()==0)
 		{
@@ -43,6 +43,7 @@ public class StringCalculator {
         		}
         	}
         	
+        	if(toInt(number)<=1000)
 		    total += toInt(number);
 		}
         
