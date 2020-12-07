@@ -3,6 +3,29 @@ package org.stringcalculator;
 public class StringCalculator {
 		
 	public static int add(String text){
-		return 0;
+		if(text.length()==0)
+		{
+			return 0;
+		}
+		else{
+			String numList[] = splitNumbers(text, ",");
+			return sum(numList);
+		}
+	}
+
+	private static String[] splitNumbers(String numbers, String divider){
+	    return numbers.split(divider);
+	}
+	
+	private static int sum(String[] numbers){
+ 	    int total = 0;
+        for(String number : numbers){
+		    total += toInt(number);
+		}
+		return total;
+    }
+	
+	private static int toInt(String number){
+		return Integer.parseInt(number);
 	}
 }
