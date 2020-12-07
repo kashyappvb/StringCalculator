@@ -7,17 +7,21 @@ public class StringCalculator {
 		{
 			return 0;
 		}
-		else{
+		else
+		{
+			text = text.replaceAll("\n", ",");
 			String numList[] = splitNumbers(text, ",");
 			return sum(numList);
 		}
 	}
 
-	private static String[] splitNumbers(String numbers, String divider){
+	private static String[] splitNumbers(String numbers, String divider)
+	{
 	    return numbers.split(divider);
 	}
 	
-	private static int sum(String[] numbers){
+	private static int sum(String[] numbers)
+	{
  	    int total = 0;
         for(String number : numbers){
 		    total += toInt(number);
@@ -25,7 +29,8 @@ public class StringCalculator {
 		return total;
     }
 	
-	private static int toInt(String number){
+	private static int toInt(String number)
+	{
 		return Integer.parseInt(number);
 	}
 }
